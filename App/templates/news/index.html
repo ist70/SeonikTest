@@ -19,7 +19,7 @@
                 <h4 class="modal-title" id="myModalLabel">Название модального окна</h4>
             </div>
             <div class="modal-body">
-                <form>
+                <form enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="name">Имя:</label>
                         <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <label for="file">Добавить к сообщению файл:</label>
-                        <input type="file" class="form-control" id="file">
+                        <input type="file" class="form-control" id="file" name="">
                     </div>
                 </form>
             </div>
@@ -89,27 +89,29 @@
             var mail = document.getElementById("mail");
             var phone = document.getElementById("phone");
             var send = document.getElementById("send");
-            var file = document.getElementById("file");
-
-            $.ajax({
-                url: '/Feedback/send/',
-                type: 'POST',
-                data: {
-                    name: name,
-                    mail: mail,
-                    phone: phone,
-                    send: send,
-                    file: file,
-                },
-                success: function (dat) {
-                    alert("Успешно");
-                },
-                error: function(e) {
-                  alert("Error");
-                },
-
-//            dataType: 'json'
-            });
+            var input = document.getElementById("file");
+            var fReader = new FileReader();
+            fReader.readAsDataURL(input.files[0]);
+            fReader.onloadend = function (event) {
+                var ff = event.target.result;
+                $.post('/Feedback/send/',
+                        {
+                            name: name.value,
+                            mail: mail.value,
+                            phone: phone.value,
+                            send: send.value,
+                            file: ff,
+                        },
+                        (function (data) {
+                        }))
+                        .success(function () {
+                            alert('Сообщение успешно отправлено');
+                            $('#basicModal').modal('hide');
+                        })
+                        .error(function () {
+                            alert('Ошибка');
+                        });
+            }
         });
     });
 </script>

@@ -25,6 +25,7 @@ switch (count($pathParts)) {
         $act = !empty($pathParts[1]) ? ucfirst($pathParts[1]) : DEFAULT_ACTION;
         break;
 }
+
 try {
     $controllerClassName = 'App\\Controllers\\' . $ctrl;
     $controller = new $controllerClassName;
