@@ -1,1 +1,17 @@
 08-03-2016 15:03:11  D:\OpenServerNew\OpenServer\domains\PHP-2-profit\lesson7\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:56  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:32  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:56  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:19  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:30  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:44  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:49  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 32 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:24  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:52  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:57  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:46  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:32  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:44  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 34 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:37  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 36 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:31  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 36 код ошибки:  0  Страница не найдена. Ошибка 404
+28-08-2017 15:08:36  D:\OpenServerNew\OpenServer\domains\SeonikTest\index.php  в строке: 36 код ошибки:  0  Страница не найдена. Ошибка 404

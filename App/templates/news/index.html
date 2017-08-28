@@ -2,6 +2,54 @@
 
 {% block content %}
 
+<div class="nav">
+    <ul class="nav nav-pills">
+        <!--<li id="feedback" class="active"><a href="/feedback/index/">Обратная связь</a></li>-->
+        <li><a class="btn btn-lg btn-default"
+               href="#" data-toggle="modal"
+               data-target="#basicModal">Обратная связь</a></li>
+    </ul>
+</div>
+
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button class="close" type="button" data-dismiss="modal">x</button>
+                <h4 class="modal-title" id="myModalLabel">Название модального окна</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Имя:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Почта:</label>
+                        <input type="email" class="form-control" id="mail" placeholder="Введите вашу почту">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" class="form-control" id="phone" placeholder="Введите телефон">
+                    </div>
+                    <div class="form-group">
+                        <label for="send">Сообщение:</label>
+                        <input type="text" class="form-control" id="send" placeholder="Введите сообщение">
+                    </div>
+                    <div class="form-group">
+                        <label for="file">Добавить к сообщению файл:</label>
+                        <input type="file" class="form-control" id="file">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-default" type="button" data-dismiss="modal">Закрыть</button>
+                <button id="feedback" class="btn btn-primary" type="button">Отправить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="container">
     <h1>Новости</h1>
     {% if news %}
@@ -30,7 +78,41 @@
     <h2>Новостей пока нет. Добавьте свою новость</h2>
     {% endif %}
 </div>
+{% endblock %}
 
+{% block script %}
+<script>
+    $(function () {
+        $(document).on('click', '#feedback', function (e) {
+            e.preventDefault();
+            var name = document.getElementById("name");
+            var mail = document.getElementById("mail");
+            var phone = document.getElementById("phone");
+            var send = document.getElementById("send");
+            var file = document.getElementById("file");
+
+            $.ajax({
+                url: '/Feedback/send/',
+                type: 'POST',
+                data: {
+                    name: name,
+                    mail: mail,
+                    phone: phone,
+                    send: send,
+                    file: file,
+                },
+                success: function (dat) {
+                    alert("Успешно");
+                },
+                error: function(e) {
+                  alert("Error");
+                },
+
+//            dataType: 'json'
+            });
+        });
+    });
+</script>
 {% endblock %}
 
 {% block memory %}

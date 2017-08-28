@@ -1,0 +1,28 @@
+{% extends "Layouts/index.html" %}
+
+{% block content %}
+<form>
+    <div class="form-group">
+        <label for="name">Имя:</label>
+        <input type="text" class="form-control" id="name" placeholder="Введите ваше имя">
+    </div>
+    <div class="form-group">
+        <label for="phone">Телефон:</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Введите телефон">
+    </div>
+    <div class="form-group">
+        <label for="send">Телефон:</label>
+        <input type="text" class="form-control" id="send" placeholder="Введите сообщение">
+    </div>
+    <div class="form-group">
+        <label for="file">Телефон:</label>
+        <input type="file" class="form-control" id="file">
+    </div>
+    <button type="submit" class="btn btn-default">Отправить</button>
+</form>
+
+{% endblock %}
+
+{% block memory %}
+{{ resource }}
+{% endblock %}
