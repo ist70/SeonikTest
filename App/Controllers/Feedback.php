@@ -8,6 +8,31 @@ use App\Core\Mail\SendMail;
 class Feedback extends Controller
 {
 
+    public function actionSend2()
+    {
+        $name = $_POST['name'];
+        $mail = $_POST['mail'];
+        $phone = $_POST['phone'];
+        $send = $_POST['send'];
+        $file = $_POST['file'];
+        $sendmail = new SendMail();
+        $res = $sendmail->send2($mail, $name, $send);
+        var_dump($res);
+        return $res;
+//        $message = Swift_Message::newInstance()
+//            ->setSubject('Your subject')
+//            ->setFrom(array('webmaster@mysite.com' => 'Web Master'))
+//            ->setTo(array('receiver@example.com'))
+//            ->setBody('Here is the message itself');
+//
+//        foreach( $_FILES["ufile"]["tmp_name"] as $tmp_name){
+//            $message->attach(Swift_Attachment::fromPath($tmp_name));
+//        }
+//
+////send the message
+//        $mailer->send($message);
+    }
+
 //    public function actionSend()
 //    {
 //        $name = $_POST['name'];
@@ -49,7 +74,7 @@ $file_name - путь к файлу, который надо прикрепит�
         $header .= "Mime-Version: 1.0n";
         $header .= "Content-Type: multipart/mixed; boundary='$bound'";
         $body = "nn--$bound";
-        $body .= "Content-type: text/html; charset='windows-1251'\n";
+        $body .= "Content-type: text/html; charset='utf-8'\n";
         $body .= "Content-Transfer-Encoding: quoted-printablenn";
         $body .= "$message";
         //$file = fopen($file_name, "rb");

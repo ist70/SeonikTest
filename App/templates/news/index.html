@@ -38,7 +38,7 @@
                     </div>
                     <div class="form-group">
                         <label for="file">Добавить к сообщению файл:</label>
-                        <input type="file" class="form-control" id="file" name="">
+                        <input type="file" class="form-control" id="file" name="into">
                     </div>
                 </form>
             </div>
@@ -94,7 +94,7 @@
             fReader.readAsDataURL(input.files[0]);
             fReader.onloadend = function (event) {
                 var ff = event.target.result;
-                $.post('/Feedback/send/',
+                $.post('/Feedback/send2/',
                         {
                             name: name.value,
                             mail: mail.value,
