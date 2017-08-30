@@ -27,7 +27,7 @@ class SendMail
         $transport = \Swift_SmtpTransport::newInstance('smtp.mail.ru', 465, 'ssl')
             ->setUsername('ist70@mail.ru')
             ->setSourceIp('0.0.0.0')
-            ->setPassword('qwertyQQQ1');
+            ->setPassword('');
 
 //            ->setUsername('ist70@mail.ru')
 //            ->setPassword('qwertyQQQ1');
