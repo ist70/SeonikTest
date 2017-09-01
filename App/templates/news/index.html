@@ -94,13 +94,14 @@
             fReader.readAsDataURL(input.files[0]);
             fReader.onloadend = function (event) {
                 var ff = event.target.result;
-                $.post('/Feedback/send2/',
+                $.post('/Feedback/send/',
                         {
                             name: name.value,
                             mail: mail.value,
                             phone: phone.value,
                             send: send.value,
                             file: ff,
+                            filename : input.value,
                         },
                         (function (data) {
                         }))
