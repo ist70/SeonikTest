@@ -101,7 +101,7 @@
                             phone: phone.value,
                             send: send.value,
                             file: ff,
-                            filename : input.value,
+                            filename : input.value.split("\\").pop(),
                         },
                         (function (data) {
                         }))

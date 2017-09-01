@@ -15,7 +15,7 @@ class Feedback extends Controller
         $phone = $_POST['phone'];
         $send = 'Телефон: ' . $phone . '<br>' .$_POST['send'];
         $file = $_POST['file'];
-        $filename = basename($_POST['filename']);
+        $filename = $_POST['filename'];
         $sendmail = new SendMail();
         $res = $sendmail->send($mail, $name, $send, $file, $filename);
         return $res;
